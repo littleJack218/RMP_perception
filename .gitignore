@@ -1,0 +1,17 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.ipynb_checkpoints/
+
+# experiment outputs (reference tables that ship with the code are tracked
+# explicitly; regenerated metrics, checkpoints and figures are not)
+outputs/
+metrics_summary.json
+reproduced_metrics.json
+*.log
+
+# evaluation inputs and trained weights are distributed as archives, not committed
+data/samples/
+data/manifest.json

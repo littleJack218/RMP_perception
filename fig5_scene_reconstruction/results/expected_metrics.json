@@ -1,0 +1,91 @@
+{
+ "paper": "Reconfigurable Macropixel for Concurrent Static-Dynamic Visual Perception (Fig. 5, scene reconstruction)",
+ "protocol": "30 REDS-derived evaluation scenes x 95 frames (2,850 samples); GT = first frame of the exposure window; conventional baseline = bicubic upsampling of the same blurred input",
+ "overall": {
+  "rmp": {
+   "psnr": 24.87,
+   "ssim": 0.6595
+  },
+  "zero_events": {
+   "psnr": 21.02,
+   "ssim": 0.5849
+  },
+  "shuffled_events": {
+   "psnr": 19.31,
+   "ssim": 0.4651
+  },
+  "conventional": {
+   "psnr": 21.08,
+   "ssim": 0.5594
+  },
+  "event_contribution_db": 3.85,
+  "shuffled_minus_zero_db": -1.71,
+  "vs_conventional_db": 3.78,
+  "vs_conventional_ssim": 0.1001
+ },
+ "scene_motion_dependence": {
+  "pearson_r_event_rate_gain": 0.828,
+  "gain_range_db": [
+   0.9,
+   6.49
+  ],
+  "matched_difficulty_subset": {
+   "definition": "scenes with conventional PSNR <= 21.6 dB (degradation at least as severe as the original test conditions)",
+   "n_scenes": 19,
+   "mean_gain_db": 4.29
+  }
+ },
+ "dynamic_static_pixels": {
+  "definition": "dynamic = pixels with >= 2 events in the exposure window, 5x5 dilated, nearest-resized to HR (input-side only)",
+  "dynamic_rmp_psnr": 23.37,
+  "dynamic_conv_psnr": 18.59,
+  "static_rmp_psnr": 26.77,
+  "static_conv_psnr": 25.11,
+  "dynamic_coverage": 0.4289
+ },
+ "region_gains": {
+  "definition": "128x128 tiles; blurred region = worst 25% of tiles by baseline error",
+  "blurred_region_mean_gain_db": 4.51,
+  "best_tile_per_image_mean_db": 9.07,
+  "best_tile_max_db": 18.85
+ },
+ "source": "full split measured 2026-09-15..17 with checkpoint rmp_real_ft4/latest_G.pth; bundled-scene rows re-verified with the released package (src/evaluate.py) on 2026-10-09",
+ "bundled_scenes": {
+  "note": "three of the 30 evaluation scenes ship with this package (028: highest mean gain; 012: highest single-tile gain, the scene of Fig. 5c,d; 013: low-motion control); the values below are the manuscript's reference rows for these scenes, results/per_scene_expected.csv is the full 30-scene table",
+  "scenes": {
+   "012": {
+    "n_samples": 95,
+    "rmp_psnr": 23.7615,
+    "rmp_ssim": 0.6553,
+    "conv_psnr": 18.3757,
+    "conv_ssim": 0.5332,
+    "zero_psnr": 18.2607,
+    "shuffled_psnr": 16.6811,
+    "delta_psnr": 5.3859,
+    "event_rate_kevs": 676.5
+   },
+   "013": {
+    "n_samples": 95,
+    "rmp_psnr": 24.6948,
+    "rmp_ssim": 0.6507,
+    "conv_psnr": 23.3934,
+    "conv_ssim": 0.6045,
+    "zero_psnr": 23.1613,
+    "shuffled_psnr": 22.5328,
+    "delta_psnr": 1.3014,
+    "event_rate_kevs": 99.3
+   },
+   "028": {
+    "n_samples": 95,
+    "rmp_psnr": 27.6947,
+    "rmp_ssim": 0.8113,
+    "conv_psnr": 21.5785,
+    "conv_ssim": 0.6904,
+    "zero_psnr": 21.511,
+    "shuffled_psnr": 19.9175,
+    "delta_psnr": 6.1161,
+    "event_rate_kevs": 364.8
+   }
+  }
+ }
+}

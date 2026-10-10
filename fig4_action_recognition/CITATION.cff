@@ -1,0 +1,28 @@
+cff-version: 1.2.0
+message: "If you use this code or data, please cite the paper below."
+title: >-
+  Retina-inspired reconfigurable macropixels for concurrent static and
+  dynamic vision at compressed bandwidth
+type: article
+authors:
+  - family-names: "Huang"
+    given-names: "Yujie"
+  - family-names: "Tan"
+    given-names: "Yinlong"
+  - family-names: "Liang"
+    given-names: "Qi"
+  - family-names: "Hao"
+    given-names: "Hao"
+  - family-names: "Ding"
+    given-names: "Weiqiang"
+  - family-names: "Chen"
+    given-names: "Aisi"
+  - family-names: "Yang"
+    given-names: "Wenjing"
+journal: "Manuscript under revision"
+year: 2026
+keywords:
+  - reservoir computing
+  - neuromorphic vision
+  - MoS2
+  - action recognition

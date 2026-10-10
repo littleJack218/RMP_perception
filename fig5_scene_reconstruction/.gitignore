@@ -1,0 +1,11 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.ipynb_checkpoints/
+
+# local evaluation output (results/expected_metrics.json and
+# results/per_scene_expected.csv are the reference tables and ARE tracked)
+results/demo_run.json
+results/reproduced_metrics.json

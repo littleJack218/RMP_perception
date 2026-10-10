@@ -1,0 +1,30 @@
+cff-version: 1.2.0
+message: "If you use this code, please cite the manuscript below."
+title: >-
+  Retina-inspired reconfigurable macropixels for concurrent static and
+  dynamic vision at compressed bandwidth
+type: software
+authors:
+  - family-names: "Huang"
+    given-names: "Yujie"
+  - family-names: "Tan"
+    given-names: "Yinlong"
+  - family-names: "Liang"
+    given-names: "Qi"
+  - family-names: "Hao"
+    given-names: "Hao"
+  - family-names: "Ding"
+    given-names: "Weiqiang"
+  - family-names: "Chen"
+    given-names: "Aisi"
+  - family-names: "Yang"
+    given-names: "Wenjing"
+year: 2026
+license: MIT
+keywords:
+  - reconfigurable macropixel
+  - MoS2 phototransistor
+  - in-sensor computing
+  - event-driven vision
+  - motion deblurring
+  - action recognition
